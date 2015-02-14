@@ -1,6 +1,8 @@
 FROM ubuntu:14.04
 MAINTAINER Itsuugo <itsuugo@gmail.com>
 
+ENV DEBIAN_FRONTEND noninteractive
+
 RUN apt-get update &&\
     apt-get install -y build-essential &&\
     apt-get build-dep qemu &&\
