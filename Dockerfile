@@ -42,8 +42,8 @@ RUN cd /src/software/protobuf-c ; sh ./autogen.sh && ./configure --disable-share
 RUN cd /src/software ; git clone https://github.com/eliben/pycparser.git
 RUN cd /src/software/pycparser ; python setup.py install
 
-# Install qemu
-RUN cd /src/panda/qemu ; ./build.sh
+# Install qemu Ubuntu 14.04 uses gcc 4.8
+RUN cd /src/panda/qemu ; CC=gcc-4.8 CXX=g++-4.8 ./build.sh
 
 
 
