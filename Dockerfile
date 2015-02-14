@@ -16,7 +16,8 @@ RUN apt-get update && apt-get install -y \
     libtool &&\
     apt-get -y build-dep qemu
 
-RUN mkdir /src ; git clone https://github.com/moyix/panda.git
+RUN mkdir /src 
+RUN cd /src ; git clone https://github.com/moyix/panda.git
 
 # Install LVM
 RUN cd /src/panda; svn checkout http://llvm.org/svn/llvm-project/llvm/tags/RELEASE_33/final/ llvm
