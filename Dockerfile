@@ -5,13 +5,13 @@ ENV DEBIAN_FRONTEND noninteractive
 
 RUN apt-get update &&\
     apt-get install -y build-essential \
-    git-core \
-    nasm \
-    libssl-dev \
-    libpcap-dev \
-    subversion \
-    curl \
-    autoconf \
+#    git-core \
+#    nasm \
+#    libssl-dev \
+#    libpcap-dev \
+#    subversion \
+#    curl \
+#    autoconf \
     libtool &&\
     apt-get build-dep qemu
 
