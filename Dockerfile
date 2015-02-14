@@ -8,7 +8,7 @@ RUN apt-get update &&\
     git-core \
     nasm \
     libssl-dev \
-    libpacap-dev \
+    libpcap-dev \
     subversion \
     curl \
     autoconf \
