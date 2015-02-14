@@ -20,8 +20,7 @@ RUN mkdir -p /src/panda
 # Install LVM
 RUN cd /src/panda; svn checkout http://llvm.org/svn/llvm-project/llvm/tags/RELEASE_33/final/ llvm
 RUN cd /src/panda/llvm/tools ; svn checkout http://llvm.org/svn/llvm-project/cfe/tags/RELEASE_33/final/ clang
-RUN cd /src/panda/llvm/tools/clang/tools ; svn checkout
-http://llvm.org/svn/llvm-project/clang-tools-extra/tags/RELEASE_33/final/ extra
+RUN cd /src/panda/llvm/tools/clang/tools ; svn checkout http://llvm.org/svn/llvm-project/clang-tools-extra/tags/RELEASE_33/final/ extra
 #RUN cd /src/panda/llvm ; CC=gcc-4.7 CXX=g++-4.7 ./configure --enable-optimized --disable-assertions --enable-targets=x86 && REQUIRES_RTTI=1 make -j $(nproc)
 RUN cd /src/panda/llvm ; ./configure --enable-optimized --disable-assertions --enable-targets=x86 && REQUIRES_RTTI=1 make -j $(nproc)
 
